@@ -4,6 +4,7 @@ import threading
 import numpy as np
 import base64
 import sys
+import time
 
 class Q:
 
@@ -40,7 +41,6 @@ def producer(fileName, q, maxFramesLoad = 9999):
     success, image = vidcap.read()
     while(success and i  < maxFramesLoad):
         
-        success, jpgImage = cv2.imencode(".jpg", image)
         frame = convertToGS(image)
         
         if(frame is  None):
