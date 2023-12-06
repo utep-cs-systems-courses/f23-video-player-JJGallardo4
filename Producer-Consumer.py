@@ -77,6 +77,3 @@ tConsumer = threading.Thread(target = consumer(q))
 
 tProducer.start()
 tConsumer.start()
-
-tProducer.join()
-tConsumer.join()
